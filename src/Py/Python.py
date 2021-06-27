@@ -12,7 +12,8 @@ class Algo:
         self.d[1] = temp
         return self.d
 
-
+def func():
+    print("hello")
 
 data = [100, 200]
 res = Algo(data)
