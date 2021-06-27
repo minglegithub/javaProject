@@ -1,9 +1,11 @@
+package Java;
+
 public class ExamJava {
 
     public static void main(String[] args) {
         int[] score = {70, 80, 90, 100};
 
-        Integer[] res = new Calc().HelloFun(score);
+        int[] res = new Calc(score).HelloFun();
         System.out.println("총점은 " + res[0] + "이고 평균은 " + res[1] + "입니다.");
         System.out.printf("총점은 %d이고 평균은 %d입니다.",res[0],res[1]);
 
@@ -17,8 +19,17 @@ public class ExamJava {
 
 
 class Calc {
-    Integer[] HelloFun(int[] score) {
-        Integer[] tmp = {0, 0};
+    int[] score;
+
+
+    public Calc(int[] score) {
+        this.score = score;
+
+
+
+    }
+    int[] HelloFun() {
+        int[] tmp = new int[2];
         for(int i : score){
             tmp[0] += i;
         }
